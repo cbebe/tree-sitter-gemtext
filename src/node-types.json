@@ -108,6 +108,10 @@
           "named": true
         },
         {
+          "type": "link_mark",
+          "named": true
+        },
+        {
           "type": "link_text",
           "named": true
         },
@@ -203,6 +207,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -314,6 +319,10 @@
   },
   {
     "type": "link_date",
+    "named": true
+  },
+  {
+    "type": "link_mark",
     "named": true
   },
   {

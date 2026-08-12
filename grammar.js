@@ -80,11 +80,12 @@ module.exports = grammar({
     quote_text: $ => /.*/,
 
     link: $ => seq(
-      /=>[ \t\r]*/,
+      $.link_mark,
       $.url,
       optional(seq($._space, choice($.link_date, $.link_text))),
       optional(seq($._space, $.link_text)),
     ),
+    link_mark: $ => /=>[ \t\r]*/,
 
     url: $ => choice(
       $.url_intern,

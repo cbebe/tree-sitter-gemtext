@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "gemtext",
   "rules": {
     "source_file": {
@@ -275,8 +276,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "=>[ \\t\\r]*"
+          "type": "SYMBOL",
+          "name": "link_mark"
         },
         {
           "type": "SYMBOL",
@@ -334,6 +335,10 @@
           ]
         }
       ]
+    },
+    "link_mark": {
+      "type": "PATTERN",
+      "value": "=>[ \\t\\r]*"
     },
     "url": {
       "type": "CHOICE",
@@ -447,6 +452,6 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
-
